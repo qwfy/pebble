@@ -1,0 +1,31 @@
+name:                pebble
+version:             0.0.0.0
+github:              "qwfy/pebble"
+license:             MIT
+author:              "Incomplete"
+maintainer:          "incomplete@aixon.co"
+copyright:           "Incomplete"
+
+extra-source-files:
+- README.md
+
+category:            Math
+
+description:         Please see the README on Github at <https://github.com/qwfy/pebble#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  pebble-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pebble
